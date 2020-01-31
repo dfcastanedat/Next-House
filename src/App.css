@@ -1,8 +1,8 @@
 .header{
     background-color: #eaeaea;
     min-height: 15vh;
-    padding: 25px;
     border: black;
+    margin-bottom: 0;
 }
 
 .header-name{
@@ -10,6 +10,17 @@
     color: black;
 }
 
+.header-body{
+    color: #eaeaea;
+}
+
 .session-buttons{
-    margin-left: 900px;
+    margin-left: 870px;
+}
+
+.body{
+    background-color: #eaeaea;
+    display: block;
+    margin: 0;
+    padding: 0;
 }
