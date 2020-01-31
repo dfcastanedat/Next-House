@@ -1,0 +1,11 @@
+.header{
+    background-color: #eaeaea;
+    min-height: 15vh;
+    padding: 25px;
+    border: black;
+}
+
+.header-name{
+    font-size: calc(30px + 2vmin);
+    color: black;
+}
