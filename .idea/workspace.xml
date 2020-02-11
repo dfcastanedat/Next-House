@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0fbcd6e-8886-470a-bdeb-82e871975784" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Components/Body.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/HouseCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +18,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -36,6 +40,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="ServiceViewManager">
     <option name="showServicesTree" value="false" />
@@ -53,7 +59,8 @@
       <workItem from="1580405250360" duration="11000" />
       <workItem from="1580413340881" duration="441000" />
       <workItem from="1580434962746" duration="4458000" />
-      <workItem from="1580482553905" duration="4267000" />
+      <workItem from="1580482553905" duration="4349000" />
+      <workItem from="1581391044636" duration="5465000" />
     </task>
     <servers />
   </component>
@@ -68,9 +75,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="112" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1580483730451" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1580485239196">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="142" y="0" key="SettingsEditor" timestamp="1581391803072">
+      <screen x="0" y="0" width="1280" height="680" />
     </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1581391803072" />
+    <state x="318" y="151" key="run.anything.popup" timestamp="1581393350231">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="318" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1581393350231" />
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1580485239196" />
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1580483018856">
       <screen x="0" y="0" width="1366" height="728" />

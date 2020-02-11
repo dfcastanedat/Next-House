@@ -15,6 +15,7 @@
 }
 
 .session-buttons{
+    position: absolute;
     margin-left: 870px;
 }
 
@@ -23,4 +24,8 @@
     display: block;
     margin: 0;
     padding: 0;
+}
+
+.subtitle{
+    display: inline;
 }
