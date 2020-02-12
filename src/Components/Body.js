@@ -27,6 +27,11 @@ class Body extends Component {
                     code: "",
                     locationmaps: "",
                 }
+            ],
+            toshow:[
+                {
+
+                }
             ]
         }
     }
@@ -78,7 +83,7 @@ class Body extends Component {
                                     </Dropdown>
                                     <Dropdown>
                                         <Dropdown.Toggle variant="light" id="dropdown-basic">
-                                            Arriendo/venta
+                                            Tipo oferta
                                         </Dropdown.Toggle>
                                         <Dropdown.Menu>
                                             <Dropdown.Item href="#/action-1">Arriendo</Dropdown.Item>
@@ -128,9 +133,38 @@ class Body extends Component {
                                 <HouseCard>
 
                                 </HouseCard>
+                                <HouseCard>
+
+                                </HouseCard>
+                                <HouseCard>
+
+                                </HouseCard>
+
                             </Row>
                         </Col>
                         <Col>
+                        </Col>
+                    </Row>
+                    <Row >
+                        <Col >
+
+                        </Col>
+                        <Col >
+                            <h1 className="subtitle">Inmuebles Cerca</h1>
+                        </Col>
+                        <Col>
+
+                        </Col>
+                    </Row>
+                    <Row>
+                        <Col>
+
+                        </Col>
+                        <Col>
+
+                        </Col>
+                        <Col>
+
                         </Col>
                     </Row>
                 </Container>
