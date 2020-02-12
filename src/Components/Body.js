@@ -7,15 +7,27 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
-import Carousel from "react-bootstrap/Carousel";
 import Container from "react-bootstrap/Container";
 import "../App.css"
 import HouseCard from "./HouseCard";
 
 class Body extends Component {
+
+    componentDidMount() {
+        this.renderMap();
+    }
+
     constructor(props) {
         super(props);
         this.state={
+            viewport:
+                {
+                latitude: 45.4211,
+                longitude: -75.6903,
+                width: "100vw",
+                height: "100vh",
+                zoom: 10,
+                },
             houses:[
                 {
                     house: "",
@@ -35,6 +47,16 @@ class Body extends Component {
             ]
         }
     }
+
+    renderMap(){
+        let mapboxgl = require('mapbox-gl/dist/mapbox-gl.js');
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuaWNhczk5aCIsImEiOiJjazRhYnQ5ZGQwMmp3M21wN2E3Z2drNHRtIn0.B2RLxhIyvTQ0_qkYwinqwA';
+        let map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11'
+        });
+    }
+
     render() {
         return(
             <div>
@@ -161,7 +183,9 @@ class Body extends Component {
 
                         </Col>
                         <Col>
+                            <div id="map" className="map">
 
+                            </div>
                         </Col>
                         <Col>
 
