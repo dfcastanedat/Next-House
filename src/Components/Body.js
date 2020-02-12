@@ -53,7 +53,106 @@ class Body extends Component {
         mapboxgl.accessToken = 'pk.eyJ1IjoiZGFuaWNhczk5aCIsImEiOiJjazRhYnQ5ZGQwMmp3M21wN2E3Z2drNHRtIn0.B2RLxhIyvTQ0_qkYwinqwA';
         let map = new mapboxgl.Map({
             container: 'map',
-            style: 'mapbox://styles/mapbox/streets-v11'
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [-73.999431, 5.019382], // starting position
+            zoom: 18 // starting zoom
+        });
+        map.addControl(new mapboxgl.NavigationControl());
+        map.on('load', function() {
+            map.loadImage(
+                'https://i.ibb.co/TBVTC84/pin.png',
+                function(error, image) {
+                    if (error) throw error;
+                    map.addImage('cat', image);
+                    map.addSource('point', {
+                        'type': 'geojson',
+                        'data': {
+                            'type': 'FeatureCollection',
+                            'features': [
+                                {
+                                    'type': 'Feature',
+                                    'properties': {
+                                        'description':
+                                            '<strong>Mi casita</strong><p><a href="http://www.mtpleasantdc.com/makeitmtpleasant" target="_blank" title="Opens in a new window">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>',
+                                        'icon': 'theatre'
+                                    },
+                                    'geometry': {
+                                        'type': 'Point',
+                                        'coordinates': [-73.999431, 5.019382]
+                                    }
+                                }
+                            ]
+                        }
+                    });
+                    map.addLayer({
+                        'id': 'points',
+                        'type': 'symbol',
+                        'source': 'point',
+                        'layout': {
+                            'icon-image': 'cat',
+                            'icon-size': 0.085
+                        }
+                    });
+                }
+            );
+        });
+        /*
+        map.on('load', function() {
+            map.addSource('places', {
+                'type': 'geojson',
+                'data': {
+                    'type': 'FeatureCollection',
+                    'features': [
+                        {
+                            'type': 'Feature',
+                            'properties': {
+                                'description':
+                                    '<strong>Mi casita</strong><p><a href="http://www.mtpleasantdc.com/makeitmtpleasant" target="_blank" title="Opens in a new window">Make it Mount Pleasant</a> is a handmade and vintage market and afternoon of live entertainment and kids activities. 12:00-6:00 p.m.</p>',
+                                'icon': 'theatre'
+                            },
+                            'geometry': {
+                                'type': 'Point',
+                                'coordinates': [-73.999431, 5.019382]
+                            }
+                        }
+                    ]
+                }
+            });
+        });
+        */
+        /*
+        map.on('load', function () {
+            map.addLayer({
+                'id': 'places',
+                'type': 'symbol',
+                'source': 'places',
+                'layout': {
+                    'icon-image': '{icon}-15',
+                    'icon-allow-overlap': true
+                }
+            });
+        })
+        */
+        map.on('click', 'points', function(e) {
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var description = e.features[0].properties.description;
+
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            new mapboxgl.Popup()
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map);
+        });
+
+        map.on('mouseenter', 'places', function() {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        map.on('mouseleave', 'places', function() {
+            map.getCanvas().style.cursor = '';
         });
     }
 
@@ -190,6 +289,10 @@ class Body extends Component {
                         <Col>
 
                         </Col>
+                    </Row>
+                    <hr/>
+                    <Row>
+
                     </Row>
                 </Container>
             </div>

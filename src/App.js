@@ -13,8 +13,8 @@ function App() {
                     <img
                         alt="Logo"
                         src={logo}
-                        width="50"
-                        height="50"
+                        width="75"
+                        height="75"
                         className="d-inline-block align-top"
                     />{' '}
                     Next House
@@ -24,7 +24,25 @@ function App() {
                     <Nav.Link href="#log">Iniciar Sesión</Nav.Link>
                 </Nav>
             </Navbar>
-                <Body/>
+            <Body/>
+            <Navbar className="header">
+                <Navbar.Brand className="footer-brand" href="#home">
+                    <img
+                        alt="Logo"
+                        src={logo}
+                        width="30"
+                        height="30"
+                        className="d-inline-block align-top"
+                    />{' '}
+                    Martha Torres
+                </Navbar.Brand>
+                    320 397 5900
+                    Calle 4A 16-15 Algarra 3 Zipaquirá
+                <Nav className="session-buttons">
+                    <Nav.Link href="#reg">Registro</Nav.Link>
+                    <Nav.Link href="#log">Iniciar Sesión</Nav.Link>
+                </Nav>
+            </Navbar>
         </div>
     );
 }

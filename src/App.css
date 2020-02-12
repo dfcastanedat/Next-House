@@ -10,6 +10,12 @@
     color: black;
 }
 
+.footer-brand{
+    font-size: calc(10px + 2vmin);
+    color: black;
+}
+
+
 .header-body{
     color: #eaeaea;
 }
